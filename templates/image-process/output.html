@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="margin: auto; width: 70rem; max-width: 95%; padding: 5%;" class="col s12 z-depth-4">
+    
+    <table class="centered">
+        <thead>
+            <tr>
+                <th>Prediction</th>
+                <th>Accuracy</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for r, p in res %}
+            <tr>
+                <td>{{r}}</td>
+                <td>{{p}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</div>
+{% endblock %}

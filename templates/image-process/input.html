@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<form style="margin: auto; width: 70rem; max-width: 95%; padding: 5%;" class="col s12 z-depth-4">
+<form action="{% url 'identify' %}" method="POST" enctype="multipart/form-data" style="margin: auto; width: 70rem; max-width: 95%; padding: 5%;" class="col s12 z-depth-4">
     <h3>Upload an image</h3>
+    {% csrf_token %}
     <div class="row">
         <div class="file-field input-field col s6">
             <div class="btn">
                 <span>Select Image</span>
-                <input type="file">
+                <input type="file" id="image" name="image">
             </div>
             <div class="file-path-wrapper col s6">
                 <input class="file-path validate" type="text">
