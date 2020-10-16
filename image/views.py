@@ -1,6 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
+
+# render image upload page
 def home(request):
-    return HttpResponse("Hello World")
+    # return HttpResponse("Hello World")
+    return render(request, 'image-process/input.html')
